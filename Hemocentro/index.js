@@ -1,5 +1,5 @@
 // Um array para armazenar os doadores
-const doadores = [doador.push(doador2, doador3, doador4, doador5)];
+const doadores = [];
 
 // Função para cadastrar um doador
 function cadastrarDoador() {
@@ -18,20 +18,22 @@ function cadastrarDoador() {
     ultimaDoacao1: ultimaDoacao,
   };
   //Crie um código que adiciona o objeto doador ao array doadores
-
- 
-
+  doadores.push(doador);
+  console.log(doadores);
   //Este código retorna uma mensagem. Deixe inalterado
   alert("Doador cadastrado com sucesso!");
 }
 
-/*// Função para listar os doadores
+// Função para listar os doadores
 function listarDoadores() {
   let resultado = "===== LISTAGEM DE DOADORES =====";
 
+  console.log(resultado);
   //Aqui vai o código que lista todos os doadores
 
-  console.log(resultado);
+  for (let doado of doadores) {
+    console.log(doado);
+  }
 }
 
 // Função para buscar doadores por tipo sanguíneo
@@ -42,10 +44,14 @@ function buscarPorTipoSanguineo() {
   resultado += "========================\n";
   resultado += "RESULTADO DA BUSCA:\n";
   resultado += "========================\n";
-
-  //Aqui vai o código que busca doadores por tipo sanguíneo
-
   console.log(resultado);
+  
+  //Aqui vai o código que busca doadores por tipo sanguíneo
+  for (let doado of doadores) {
+    if (tipoSanguineo === doado.tipoSanguineo1) {
+      console.log(doado)
+    }
+  }
 }
 
 // Função para buscar doadores por data da última doação
@@ -56,10 +62,14 @@ function buscarPorDataUltimaDoacao() {
   resultado += "========================\n";
   resultado += "RESULTADO DA BUSCA:\n";
   resultado += "========================\n";
-
-  //Aqui vai o código que busca os doadores por data da última doação
-
+  
   console.log(resultado);
+  //Aqui vai o código que busca os doadores por data da última doação
+  for (let data of doadores) {
+    if (dataDesejada === data.ultimaDoacao1) {
+      console.log(data)
+  }
+}
 }
 
 // Função para executar a ação com base na opção selecionada no menu suspenso
@@ -87,4 +97,3 @@ function executarAcao() {
       console.log("Opção inválida. Tente novamente.");
   }
 }
-*/
